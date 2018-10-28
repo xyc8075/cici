@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "semi": [1, "never"],
+    "arrow-parens": 2,
+    "consistent-return": 2,
+    "comma-dangle": 0,
+    "no-debugger": 1,
+    "no-console": 1,
+    "generator-star-spacing": 0,
+    "import/no-unresolved": ["error", { "ignore": ["electron"] }],
+    "import/no-extraneous-dependencies": "off",
+    "promise/param-names": 2,
+    "promise/always-return": 2,
+    "promise/catch-or-return": 2,
+    "promise/no-native": 0,
+    "react/jsx-no-bind": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/label-has-for": 1,
+    "prop-types": 0,
+    "no-unused-expressions": "off",
+    "linebreak-style": 0,
+    "react/sort-comp": [
+      1,
+      {
+        "order": ["static-methods", "lifecycle", "handler", "getters", "everything-else", "rendering"],
+        "groups": {
+          "handler": ["/^handle.+$/"],
+          "rendering": ["/^render.+$/", "render"]
+        }
+      }
+    ]
+  },
+  "plugins": ["import", "promise", "react"],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.development.js"
+      }
+    }
+  }
+}
