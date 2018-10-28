@@ -32,10 +32,10 @@ module.exports = merge.smart(baseConfig, {
         test: /\.js$/,
         exclude: /node_modules/,
         enforce: 'pre',
-        use: {
-          loader: 'eslint-loader',
-          options: { formatter }
-        }
+        // use: {
+        //   loader: 'eslint-loader',
+        //   options: { formatter }
+        // }
       },
       {
         test: /\.css$/,
